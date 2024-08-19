@@ -13,6 +13,7 @@ return {
 					"lua_ls",
 					"ruff_lsp",
 					"jedi_language_server",
+          "rust_analyzer",
 				},
 			})
 		end,
@@ -30,6 +31,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.jedi_language_server.setup({
+				capabilities = capabilities,
+			})
+      lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
